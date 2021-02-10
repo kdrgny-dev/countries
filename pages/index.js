@@ -36,7 +36,7 @@ export default function Home({ countries }) {
                                 <img src={country.flag} alt={country.name} className="card-img-top" style={{ height: '175px' }} />
                                 <div className="card-body">
                                     <h5 className="card-title">{country.name}</h5>
-                                    <Link href={`/country/${country.alpha3Code.toLowerCase()}`}>
+                                    <Link href={`/country/${encodeURIComponent(country.alpha3Code.toLowerCase())}`}>
                                         <a className="btn btn-primary">Go {country.name} detail</a>
                                     </Link>
 
