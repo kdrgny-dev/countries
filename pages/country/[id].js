@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export const getStaticPaths = async () => {
     const res = await fetch('https://restcountries.eu/rest/v2/all');
@@ -6,7 +7,7 @@ export const getStaticPaths = async () => {
 
     const paths = data.map(country => {
         return {
-            params: { id: country.alpha3Code }
+            params: { id: country.alpha3Code.toLowerCase() }
         }
     })
     return {
@@ -23,8 +24,7 @@ export const getStaticProps = async (context) => {
 
     return {
         props: {
-            country: data,
-            mounrty: 'aaa'
+            country: data
         }
     }
 }
@@ -34,6 +34,8 @@ const numberWithCommas = (x) => {
 }
 
 const Detail = ({ country }) => {
+    const router = useRouter()
+    const { id } = router.query
 
     return (
         <div className="container">
