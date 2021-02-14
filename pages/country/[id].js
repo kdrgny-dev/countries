@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 
 const Detail = ({ country }) => {
     const router = useRouter()
@@ -10,6 +11,9 @@ const Detail = ({ country }) => {
 
     return (
         <div>
+            <Head>
+                <title>{country.name } - Country Knowloedge App | kdrgny.dev</title>
+            </Head>
             <div className="container vh-100">
                 {/* top */}
                 <div className="row pt-3 border-bottom border-2">
