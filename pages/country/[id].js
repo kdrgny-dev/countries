@@ -24,7 +24,7 @@ const Detail = ({ country }) => {
                 </div>
                 {/* content */}
                 <div className="row pt-2 justify-content-between">
-                    <div className="col-3">
+                    <div className="col-lg-3 col-md-12">
                         <div className="position-relative">
                             <img src={country.flag} alt={country.name} className="card-img-top" />
                             <div className="position-absolute bottom-0 end-0 translate-bottom pe-2 pb-2 text-white">
@@ -34,7 +34,7 @@ const Detail = ({ country }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-5">
+                    <div className="col-lg-5 col-md-12">
                         <ul className="list-group">
                             <li className="list-group-item d-flex justify-content-between align-items-center">
                                 <strong>Capital</strong>
@@ -105,7 +105,7 @@ const Detail = ({ country }) => {
 
                     </div>
 
-                    <div className="col-4">
+                    <div className="col-lg-4 col-md-12">
                         <div>
                             <iframe
                                 width={"100%"}

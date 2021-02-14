@@ -64,7 +64,7 @@ export default function Home({ countries }) {
             <div className="row pt-5">
                 {
                     countries.map(country => (
-                        <div className="col-3 mb-3" key={country.name}>
+                        <div className="col-lg-3 col-md-6 mb-3 col-sm-12" key={country.name}>
                             <div className="card">
                                 <Link href={`/country/${encodeURIComponent(country.alpha3Code.toLowerCase())}`}>
                                     <a><img src={country.flag} alt={country.name} className="card-img-top" style={{ height: '175px' }} /></a>
